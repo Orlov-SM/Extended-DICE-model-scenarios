@@ -285,8 +285,6 @@ EQUATIONS
  kk(t+1)..            K(t+1)         =L= (1-dk)**tstep * K(t) + tstep * I(t);
  bb(t+1)..            B(t+1)         =E= (1+rB)**tstep * B(t) + tstep *( ABATECOST(t) - TAXCOST(t) );
  rieq(t+1)..          RI(t)          =E= (1+prstp) * (CPC(t+1)/CPC(t))**(elasmu/tstep) - 1;
-* rieq(t+1)..          RI(t)          =E= DAMFRAC(t)*GAMA*(al(t)*(L(t)/1000)**(1-GAMA))*(K(t)**(GAMA-1));
-* rieq(t+1)..          RI(t)          =E= (4/(1+(K(t)-B(t))/K(t))**2)*0.001*B(t);
 
 *Utility
  cemutotpereq(t)..    CEMUTOTPER(t)  =E= PERIODU(t) * L(t) * rr(t);
